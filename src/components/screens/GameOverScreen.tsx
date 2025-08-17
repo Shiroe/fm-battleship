@@ -6,10 +6,11 @@ export default function GameOverScreen() {
   const round = useCombinedStore((state) => state.round);
   const actions = useCombinedStore((state) => state.actions);
   const isGameWon = useCombinedStore((state) => state.isGameWon);
-  
-  const hits = actions.filter(action => action.result === 'hit').length;
-  const misses = actions.filter(action => action.result === 'miss').length;
-  const accuracy = actions.length > 0 ? Math.round((hits / actions.length) * 100) : 0;
+
+  const hits = actions.filter((action) => action.result === 'hit').length;
+  const misses = actions.filter((action) => action.result === 'miss').length;
+  const accuracy =
+    actions.length > 0 ? Math.round((hits / actions.length) * 100) : 0;
 
   const handlePlayAgain = () => {
     resetGame();

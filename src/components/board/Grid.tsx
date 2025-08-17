@@ -15,7 +15,7 @@ const MemoizedGridItem = memo(function MemoizedGridItem({
   totalShipsCount: number;
 }) {
   const status = useCombinedStore((state) => state.getStatusAt(location));
-  
+
   return (
     <GridItem
       location={location}

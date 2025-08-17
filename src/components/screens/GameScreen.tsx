@@ -6,9 +6,9 @@ import ShipSunkModal from '@/components/modals/ShipSunkModal';
 export default function GameScreen() {
   const round = useCombinedStore((state) => state.round);
   const actions = useCombinedStore((state) => state.actions);
-  
-  const hits = actions.filter(action => action.result === 'hit').length;
-  const misses = actions.filter(action => action.result === 'miss').length;
+
+  const hits = actions.filter((action) => action.result === 'hit').length;
+  const misses = actions.filter((action) => action.result === 'miss').length;
 
   return (
     <div className='min-h-screen bg-gradient-to-br from-blue-50 to-blue-100 p-4'>
