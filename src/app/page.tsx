@@ -1,7 +1,5 @@
+import GameManager from '@/components/GameManager';
+
 export default function Home() {
-  return (
-    <div className="font-sans">
-      <main className=""></main>
-    </div>
-  );
+  return <GameManager />;
 }
